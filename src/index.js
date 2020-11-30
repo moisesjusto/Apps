@@ -17,6 +17,9 @@ app.use(express.urlencoded({extended:false}));
 app.set('port',process.env.PORT || 4000)
 
 //router
+app.get('/',(req,res)=>{
+    res.send('ok')
+})
 //http User
 app.use(require('./router/NewUser'));
 //http Notes
